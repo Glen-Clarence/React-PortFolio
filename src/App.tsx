@@ -2,15 +2,9 @@ import "./App.css";
 import Home from "./assets/Pages/Home";
 // import Lenis from "@studio-freight/lenis";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Outlet,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./assets/components/Header";
 import About from "./assets/Pages/About";
 import Work from "./assets/Pages/Work";
@@ -27,7 +21,7 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 function App() {
-  const [scrollPosition, setscrollPosition] = useState(0);
+  // const [scrollPosition, setscrollPosition] = useState(0);
   // const lenis = new Lenis({
   //   lerp: 0.1,
   //   smoothWheel: true,
