@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Stella Nova Black";
+  src: url("/fonts/StellaNova-Black.otf");
+}
+@font-face {
+  font-family: "Stella Nova bold";
+  src: url("/fonts/StellaNova-Bold.otf");
+}
+@font-face {
+  font-family: "Stella Nova Medium";
+  src: url("/fonts/StellaNova-Regular.otf");
+}
