@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./assets/Pages/Home";
-import Lenis from "@studio-freight/lenis";
+// import Lenis from "@studio-freight/lenis";
 
 import { useEffect, useState } from "react";
 
@@ -28,19 +28,19 @@ const ScrollToTop: React.FC = () => {
 };
 function App() {
   const [scrollPosition, setscrollPosition] = useState(0);
-  const lenis = new Lenis({
-    lerp: 0.1,
-    smoothWheel: true,
-    duration: 1.2,
-    easing: (t: any) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  });
+  // const lenis = new Lenis({
+  //   lerp: 0.1,
+  //   smoothWheel: true,
+  //   duration: 1.2,
+  //   easing: (t: any) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  // });
 
-  function raf(time: Lenis) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
+  // function raf(time: Lenis) {
+  //   lenis.raf(time);
+  //   requestAnimationFrame(raf);
+  // }
 
-  requestAnimationFrame(raf);
+  // requestAnimationFrame(raf);
 
   const routes = [
     { path: "/", element: <Home /> },
