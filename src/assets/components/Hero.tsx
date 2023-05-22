@@ -7,7 +7,13 @@ import Arrow from "../img/arrow.png";
 const Hero: React.FC = () => {
   return (
     <div>
-      <div className='flex container gap-10'>
+      <div className='flex container gap-10 relative'>
+        <span className='fixed pointer-events-none z-[0] font-stellaNova opacity-5 text-[12rem] top-[5rem] right-[-456px] hidden lg:block'>
+          UX Design
+        </span>
+        <span className='fixed pointer-events-none z-[0] font-stellaNova opacity-5 text-[12rem] top-[5rem] left-[-456px] hidden lg:block'>
+          UX Design
+        </span>
         <Heading
           size='text-lg md:text-4xl'
           bold
@@ -29,7 +35,7 @@ const Hero: React.FC = () => {
           headerText='I’m constantly learning and growing, I’m confident in my ability to create engaging and user-friendly designs. '
         />
         <div className='mt-12 flex justify-end font-stellaNova relative'>
-          <div className='absolute -top-[110px] -right-[15px]'>
+          <div className='absolute top-[-50px] md:-top-[110px] -right-[15px]'>
             <img src={Arrow} alt='Arrow' />
           </div>
           <Button className='bg-button-primary text-white'>

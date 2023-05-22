@@ -15,11 +15,22 @@ const Header = () => {
             <h2>Hubli</h2>
             <h5 className='text-slate-600'>Karnataka</h5>
           </div>
-          <div className='hidden md:block font font-rubik'>
-            <h5 className='text-slate-600'>glenclarence007@gmail.com</h5>
+          <div className='hidden md:block font-rubik'>
+            <h5 className='text-slate-600'>
+              <a href='mailto:glenclarence007@gmail.com'>
+                glenclarence007@gmail.com
+              </a>
+            </h5>
           </div>
           <div className=''>
-            <h5 className='text-slate-600'>Linkedin</h5>
+            <h5 className='text-slate-600 font-rubik'>
+              <a
+                target='_blank'
+                href='https://www.linkedin.com/in/glen-warrangal/'
+              >
+                Linkedin
+              </a>
+            </h5>
           </div>
           <div className='border-b-[3px] border-border-bg opacity-50 absolute -bottom-[8px] w-full'></div>
         </div>
