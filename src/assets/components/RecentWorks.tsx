@@ -1,8 +1,7 @@
-import Button from "./Button";
 import Heading from "./Heading";
 import RecentWork from "./RecentWork";
-import { Link } from "react-router-dom";
 import Arrow from "../img/arrow.png";
+import { MyBubblyLink } from "./AnimateLink";
 
 interface recentWorksProps {
   showButton: boolean;
@@ -11,7 +10,7 @@ interface recentWorksProps {
 const RecentWorks: React.FC<recentWorksProps> = ({ showButton }) => {
   const recentWorks = [
     { work: "Adventure", domain: "Design & Development" },
-    { work: "Beatty’s", domain: "Design & Development" },
+    { work: "TaskTracker", domain: "Design & Development" },
     { work: "NetProffiter", domain: "Design & Development" },
   ];
   return (
@@ -42,9 +41,11 @@ const RecentWorks: React.FC<recentWorksProps> = ({ showButton }) => {
             <div className='absolute -top-[50px] md:-top-[100px] right-[10px]'>
               <img src={Arrow} alt='Arrow' />
             </div>
-            <Button className='bg-button-primary text-white'>
-              <Link to='/work'>Work</Link>
-            </Button>
+            <MyBubblyLink to='/work'>
+              <span className='bg-button-primary text-white text-4xl px-3 py-3  font-medium'>
+                Work
+              </span>
+            </MyBubblyLink>
           </>
         )}
       </div>
