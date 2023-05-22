@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { MyBubblyLink } from "./AnimateLink";
+// import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -6,10 +7,10 @@ const Header = () => {
       <div className='container  pt-5 '>
         <div className='flex justify-between relative items-end md:items-center'>
           <div className='font-rubik'>
-            <Link to='/'>
-              <h2>Glen Clarence</h2>
+            <MyBubblyLink to='/'>
+              <h2 className='text-left'>Glen Clarence</h2>
               <h5 className='text-slate-600'>UX/UI Engineer</h5>
-            </Link>
+            </MyBubblyLink>
           </div>
           <div className='hidden md:block font-rubik'>
             <h2>Hubli</h2>

@@ -1,7 +1,8 @@
-import Button from "./Button";
+// import Button from "./Button";
 import Heading from "./Heading";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Arrow from "../img/arrow.png";
+import { MyBubblyLink } from "./AnimateLink";
 // import { BubblyLink } from "react-bubbly-transitions";
 
 const Hero: React.FC = () => {
@@ -38,10 +39,18 @@ const Hero: React.FC = () => {
           <div className='absolute top-[-50px] md:-top-[110px] -right-[15px]'>
             <img src={Arrow} alt='Arrow' />
           </div>
-          <Button className='bg-button-primary text-white'>
-            {/* <BubblyLink to='/'>About me</BubblyLink> */}
+          <MyBubblyLink
+            // className='bg-button-primary text-white text-4xl px-3 py-3  font-medium'
+            to='/about'
+          >
+            <span className='bg-button-primary text-white text-4xl px-3 py-3  font-medium'>
+              About me
+            </span>
+          </MyBubblyLink>
+          {/* <Button >
+            
             <Link to={"/about"}>About me</Link>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </div>
