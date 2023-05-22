@@ -39,7 +39,7 @@ const RecentWorks: React.FC<recentWorksProps> = ({ showButton }) => {
       <div className='container mt-12 md:mt-36 flex justify-end font-stellaNova relative'>
         {showButton && (
           <>
-            <div className='absolute -top-[100px] right-[10px]'>
+            <div className='absolute -top-[50px] md:-top-[100px] right-[10px]'>
               <img src={Arrow} alt='Arrow' />
             </div>
             <Button className='bg-button-primary text-white'>

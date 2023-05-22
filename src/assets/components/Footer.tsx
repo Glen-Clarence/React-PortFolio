@@ -16,10 +16,33 @@ const Footer: React.FC = () => {
       </div>
       <div className='container flex justify-between items-end pb-8'>
         <div className='md:text-xl'>
-          <h5>Linkedin</h5>
-          <h5>Github</h5>
+          <h5>
+            <a
+              href='https://www.linkedin.com/in/glen-warrangal/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Github
+            </a>
+          </h5>
+          <h5>
+            <a
+              href='https://github.com/Glen-Clarence'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Linkedin
+            </a>
+          </h5>
         </div>
-        <h5 className='md:text-xl'>Resume</h5>
+        <h5 className='md:text-xl'>
+          <a
+            target='_blank'
+            href='https://drive.google.com/file/d/1XD2bHtUOE2PsJo0BStuKc287Q0zNqJx8/view?usp=share_link'
+          >
+            Resume
+          </a>
+        </h5>
       </div>
     </footer>
   );
