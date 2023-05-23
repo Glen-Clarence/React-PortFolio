@@ -10,6 +10,7 @@ import About from "./assets/Pages/About";
 import Work from "./assets/Pages/Work";
 import Footer from "./assets/components/Footer";
 import { BubblyContainer } from "react-bubbly-transitions";
+import Projects from "./assets/Pages/Projects";
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -40,6 +41,7 @@ function App() {
     { path: "/", element: <Home /> },
     { path: "/about", element: <About /> },
     { path: "/work", element: <Work /> },
+    { path: "/projects", element: <Projects /> },
   ];
   return (
     <BrowserRouter>

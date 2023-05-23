@@ -2,6 +2,11 @@ import Experience from "../components/Experience";
 import Heading from "../components/Heading";
 import GlenSmall from "../img/About.jpg";
 import GlenLarge from "../img/About-Large.jpg";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+
+import { fadeIn } from "../components/Animtions";
+
 const About: React.FC = () => {
   const workExperience = [
     {
@@ -58,8 +63,15 @@ const About: React.FC = () => {
       ],
     },
   ];
+  const aboutPage = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      fadeIn(aboutPage.current);
+    });
+    return () => ctx.revert();
+  }, []);
   return (
-    <div>
+    <div ref={aboutPage}>
       <div className='container'>
         <Heading
           headerText='I just never know what to say on this page.'
