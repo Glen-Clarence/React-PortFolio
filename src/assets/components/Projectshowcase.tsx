@@ -20,7 +20,7 @@ const Projectshowcase: React.FC = () => {
           scrub: 1.5,
           start: "top 60%",
           end: "+=600",
-          ease: "power3.inOut",
+          // ease: "power3.inOut",
           markers: true,
         },
       });
