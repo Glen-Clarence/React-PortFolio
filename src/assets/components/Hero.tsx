@@ -8,11 +8,11 @@ import { MyBubblyLink } from "./AnimateLink";
 const Hero: React.FC = () => {
   return (
     <div>
-      <div className='flex container gap-10 relative'>
-        <span className='fixed pointer-events-none z-[0] font-stellaNova opacity-5 text-[12rem] top-[5rem] right-[-456px] hidden lg:block'>
+      <div className='flex container gap-10 relative overflow-hidden'>
+        <span className='absolute pointer-events-none z-[0] font-stellaNova opacity-5 text-[12rem] top-[5rem] right-[-456px] hidden lg:block'>
           UX Design
         </span>
-        <span className='fixed pointer-events-none z-[0] font-stellaNova opacity-5 text-[12rem] top-[5rem] left-[-456px] hidden lg:block'>
+        <span className='absolute pointer-events-none z-[0] font-stellaNova opacity-5 text-[12rem] top-[5rem] left-[-456px] hidden lg:block'>
           UX Design
         </span>
         <Heading

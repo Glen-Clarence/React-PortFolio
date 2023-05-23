@@ -1,9 +1,19 @@
 import Heading from "../components/Heading";
 import RecentWorks from "../components/RecentWorks";
 
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { fadeIn } from "../components/Animtions";
 const Work: React.FC = () => {
+  const work = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      fadeIn(work.current);
+    });
+    return () => ctx.revert();
+  }, []);
   return (
-    <>
+    <div ref={work}>
       <div className='container'>
         <Heading
           size='text-xl'
@@ -13,7 +23,7 @@ const Work: React.FC = () => {
         />
       </div>
       <RecentWorks showButton={false} />
-    </>
+    </div>
   );
 };
 
