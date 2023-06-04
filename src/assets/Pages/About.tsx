@@ -90,12 +90,12 @@ const About: React.FC = () => {
         />
       </div>
       <div className='container md:flex md:gap-10'>
-        <Heading
-          headerText=" But what I do know is that I'm a T-shaped Designer, with in-house experience, work experience, and little life experience, and I'm energized by fun."
-          bold={false}
-          className=' md:h-fit sticky top-4 md:w-[30%] md:mt-16 font-stellaNova tracking-wider leading-heading mt-4'
-          size='text-xl md:text-2xl '
-        />
+        <h2 className='text-xl md:text-2xl md:h-fit sticky top-4 md:w-[30%] md:mt-16 font-stellaNova tracking-wider leading-heading mt-4'>
+          But what I do know is that I'm a T-shaped Designer, with in-house
+          experience,
+          <span className='text-button-primary'>work experience</span> , and
+          little life experience, and I'm energized by fun.
+        </h2>
         <div className='md:w-[60%]'>
           <h2 className='text-xl font-stellaNova tracking-wide leading-heading mt-8'>
             Experience

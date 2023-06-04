@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
+
 const Projectshowcase: React.FC = () => {
   const projectImage = useRef(null);
 
@@ -26,14 +27,14 @@ const Projectshowcase: React.FC = () => {
       });
       growTl.to(projectImage.current, {
         duration: 1,
-        scale: 1.1,
+        scale: 1,
       });
     });
     return () => ctx.revert();
   }, []);
 
   return (
-    <div>
+    <div className='pt-1' style={{ background: "#fce8ff" }}>
       <div className='container'>
         <Heading
           size='text-xl'
