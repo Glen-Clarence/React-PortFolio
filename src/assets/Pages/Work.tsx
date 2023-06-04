@@ -1,11 +1,17 @@
 import Heading from "../components/Heading";
-import RecentWorks from "../components/RecentWorks";
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { fadeIn } from "../components/Animtions";
+import Projects from "./Projects";
+import { Link } from "react-router-dom";
 const Work: React.FC = () => {
   const work = useRef<HTMLDivElement>(null);
+  const recentWorks = [
+    { work: "Adventure", domain: "Design & Development" },
+    { work: "TaskTracker", domain: "Design & Development" },
+    { work: "NetProffiter", domain: "Design & Development" },
+  ];
   useEffect(() => {
     const ctx = gsap.context(() => {
       fadeIn(work.current);
@@ -22,7 +28,13 @@ const Work: React.FC = () => {
           headerText='Innovative solutions for modern challenges'
         />
       </div>
-      <RecentWorks showButton={false} />
+      <div className='container'>
+        {recentWorks.map((recent, index) => (
+          <Link to={`/work/${index + 1}`} key={index}>
+            <Projects work={recent.work} domain={recent.domain} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
