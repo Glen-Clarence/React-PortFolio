@@ -3,8 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      stellaNova: ["Stella Nova Black", "system-ui", "sans-serif"],
-      stellaNovaBold: ["Stella Nova Medium", "system-ui", "sans-serif"],
       rubik: ["Rubik", "system-ui", "sans-serif"],
     },
     container: {

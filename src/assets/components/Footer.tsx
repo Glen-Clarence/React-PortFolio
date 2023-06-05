@@ -2,15 +2,15 @@ const Footer: React.FC = () => {
   return (
     <footer className='bg-light-bg'>
       <div className='container py-8 md:py-16'>
-        <h2 className='text-2xl font-stellaNova tracking-wide leading-heading'>
+        <h2 className='text-2xl font-rubik tracking-wide leading-heading'>
           Hire me
         </h2>
-        <div className='text-xl mt-4 px-4 py-2 bg-button-primary w-fit text-white font-stellaNova '>
+        <div className='text-xl mt-4 px-4 py-2 bg-button-primary w-fit text-white font-rubik '>
           <a href='mailto:glenclarence007@gmail.com'>
             glenclarence007@gmail.com
           </a>
         </div>
-        <div className='text-xl px-4 py-2 bg-button-primary w-fit mt-4 text-white font-stellaNova'>
+        <div className='text-xl px-4 py-2 bg-button-primary w-fit mt-4 text-white font-rubik'>
           +91 809 5081 182
         </div>
       </div>

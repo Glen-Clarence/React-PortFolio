@@ -12,7 +12,7 @@ const Heading: React.FC<Headerprops> = ({
 }) => {
   return (
     <h1
-      className={size + className + `${bold ? " font-bold" : " font-medium"}`}
+      className={size + className + `${bold ? " font-bold" : " "}`}
     >
       {headerText}
     </h1>

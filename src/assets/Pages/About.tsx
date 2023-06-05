@@ -76,7 +76,7 @@ const About: React.FC = () => {
         <Heading
           headerText='I just never know what to say on this page.'
           bold
-          className=' md:text-6xl md:w-[60%] md:leading-[1.3] font-stellaNova tracking-wider leading-heading relative mt-24'
+          className=' md:text-6xl md:w-[60%] md:leading-[1.3] font-rubik tracking-wider leading-heading relative mt-24'
           size='text-xl '
         />
       </div>
@@ -90,14 +90,14 @@ const About: React.FC = () => {
         />
       </div>
       <div className='container md:flex md:gap-10'>
-        <h2 className='text-xl md:text-2xl md:h-fit sticky top-4 md:w-[30%] md:mt-16 font-stellaNova tracking-wider leading-heading mt-4'>
+        <h2 className='text-xl md:text-2xl md:h-fit sticky top-4 md:w-[30%] md:mt-16 font-rubik tracking-wider leading-heading mt-4'>
           But what I do know is that I'm a T-shaped Designer, with in-house
           experience,
           <span className='text-button-primary'>work experience</span> , and
           little life experience, and I'm energized by fun.
         </h2>
         <div className='md:w-[60%]'>
-          <h2 className='text-xl font-stellaNova tracking-wide leading-heading mt-8'>
+          <h2 className='text-xl font-rubik tracking-wide leading-heading mt-8'>
             Experience
           </h2>
           {workExperience.map((exp, index) => (

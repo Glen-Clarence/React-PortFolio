@@ -39,7 +39,7 @@ const Projectshowcase: React.FC = () => {
         <Heading
           size='text-xl'
           bold
-          className=' mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-stellaNova tracking-wider'
+          className=' mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-rubik tracking-wider'
           headerText='Adventurer'
         />
       </div>
@@ -55,7 +55,7 @@ const Projectshowcase: React.FC = () => {
             <img src={Arrow} alt='Arrow' />
           </div>
           <button>
-            <span className='bg-button-primary text-white text-4xl px-3 py-3  font-medium font-stellaNova '>
+            <span className='bg-button-primary text-white text-4xl px-3 py-3  font-medium font-rubik '>
               Live site
             </span>
           </button>
@@ -100,7 +100,7 @@ const Projectshowcase: React.FC = () => {
         <Heading
           size='text-xl'
           bold
-          className=' mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-stellaNova tracking-wider'
+          className=' mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-rubik tracking-wider'
           headerText='Check out the design file'
         />
         <iframe

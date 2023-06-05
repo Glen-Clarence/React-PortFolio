@@ -25,17 +25,17 @@ const RecentWorks: React.FC<recentWorksProps> = ({ showButton }) => {
         <Heading
           size='text-base'
           bold={false}
-          className=' mt-14 md:mt-36 md:leading-[2.5rem] md:w-[60%] md:text-2xl font-stellaNova tracking-wider text-slate-600 leading-subHeading'
+          className=' mt-14 md:mt-36 md:leading-[2.5rem] md:w-[60%] md:text-2xl font-rubik tracking-wider text-slate-600 leading-subHeading'
           headerText='I am dedicated to delivering the best possible user experience through my front-end design and development work. '
         />
         <Heading
           size='text-base'
           bold
-          className=' mt-14 md:mt-36 text-md  hidden md:block md:w-[40%] md:flex-1 font-stellaNovaBold tracking-wider  leading-subHeading'
+          className=' mt-14 md:mt-36 text-md  hidden md:block md:w-[40%] md:flex-1 font-rubikBold tracking-wider  leading-subHeading'
           headerText='My expertise in front-end design and development allows me to bring ideas to life, creating digital experiences that are not only aesthetically pleasing but also highly usable and engaging.'
         />
       </div>
-      <div className='container mt-12 md:mt-36 flex justify-end font-stellaNova relative'>
+      <div className='container mt-12 md:mt-36 flex justify-end font-rubik relative'>
         {showButton && (
           <>
             <div className='absolute -top-[50px] md:-top-[100px] right-[10px]'>
