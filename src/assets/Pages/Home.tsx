@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <div className='bg-light-bg'>
+    <div>
       <div ref={home}>
         <Hero />
         <RecentWorks showButton />

@@ -1,11 +1,13 @@
+import { ReactNode } from "react";
+
 interface Headerprops {
-  headerText: string;
+  children: ReactNode;
   bold: boolean;
   size: string;
   className: string | null;
 }
 const Heading: React.FC<Headerprops> = ({
-  headerText,
+  children,
   bold,
   size,
   className,
@@ -14,7 +16,7 @@ const Heading: React.FC<Headerprops> = ({
     <h1
       className={size + className + `${bold ? " font-bold" : " "}`}
     >
-      {headerText}
+      {children}
     </h1>
   );
 };

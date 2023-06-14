@@ -1,6 +1,6 @@
 interface ExperienceProps {
   company: string;
-  position: string;
+  position?: string;
   duration: string;
   responsibilities: { point: string }[];
 }
@@ -11,13 +11,15 @@ const Experience: React.FC<ExperienceProps> = ({
   responsibilities,
 }) => {
   return (
-    <div className='mt-8 font-rubik'>
-      <h2 className='text-slate-700'>{company} </h2>
-      <h1 className='font-semibold'>{position}</h1>
-      <h4 className='text-slate-700'>{duration}</h4>
-      <div className=''>
+    <div className="mt-8 font-rubik">
+      <h2 className="text-slate-700">{company} </h2>
+      <h1 className="font-semibold">{position}</h1>
+      <h4 className="text-slate-700">{duration}</h4>
+      <div className="mt-2">
         {responsibilities.map((responsibility, idx) => (
-          <li key={idx}>{responsibility.point}</li>
+          <li key={idx} className="leading-[1.6]">
+            {responsibility.point}
+          </li>
         ))}
       </div>
     </div>

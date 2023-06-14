@@ -1,8 +1,10 @@
 import "./App.css";
 import Home from "./assets/Pages/Home";
-// import Lenis from "@studio-freight/lenis";
+/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+/* @ts-ignore */
+import Lenis from "@studio-freight/lenis";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./assets/components/Header";
@@ -22,20 +24,26 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 function App() {
+  /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+  /* @ts-ignore */
   // const [scrollPosition, setscrollPosition] = useState(0);
-  // const lenis = new Lenis({
-  //   lerp: 0.1,
-  //   smoothWheel: true,
-  //   duration: 1.2,
-  //   easing: (t: any) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  // });
 
-  // function raf(time: Lenis) {
-  //   lenis.raf(time);
-  //   requestAnimationFrame(raf);
-  // }
+  /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+  /* @ts-ignore */
+  const lenis = new Lenis({
+    lerp: 0.1,
+    smoothWheel: true,
+    duration: 1.2,
+    easing: (t: never) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
+  /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
+  /* @ts-ignore */
+  function raf(time: Lenis) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
 
-  // requestAnimationFrame(raf);
+  requestAnimationFrame(raf);
 
   const routes = [
     { path: "/", element: <Home /> },

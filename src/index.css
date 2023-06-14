@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Stella Nova Black";
-  src: url("/fonts/StellaNova-Black.otf");
+.text-lg > div:nth-child(1) > div:nth-child(1) > span:hover {
+  color: #146C94;
 }
-@font-face {
-  font-family: "Stella Nova bold";
-  src: url("/fonts/StellaNova-Bold.otf");
+.text-lg > div:nth-child(1) > div:nth-child(2) > span:hover {
+  color: #146C94;
 }
-@font-face {
-  font-family: "Stella Nova Medium";
-  src: url("/fonts/StellaNova-Regular.otf");
+.text-lg > div:nth-child(1) > div:nth-child(1) > span,
+.text-lg > div:nth-child(1) > div:nth-child(2) > span {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
+.text-lg > div:nth-child(1) > div:nth-child(1) > span:nth-child(3),.text-lg > div:nth-child(1) > div:nth-child(1) > span:nth-child(4) {
+  color: #146C94;
+  }
+  
