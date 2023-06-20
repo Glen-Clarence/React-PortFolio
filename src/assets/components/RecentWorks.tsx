@@ -40,7 +40,7 @@ const RecentWorks: React.FC<recentWorksProps> = ({ showButton }) => {
               <img src={Arrow} alt="Arrow" />
             </div>
             <MyBubblyLink to="/work">
-              <span className="bg-button-primary text-white text-4xl px-3 py-3  font-medium">
+              <span className="bg-button-primary text-white hover:opacity-80 hover:rounded-xl text-4xl px-3 py-3  font-medium">
                 Work
               </span>
             </MyBubblyLink>

@@ -2,12 +2,13 @@ import Experience from "../components/Experience";
 import Heading from "../components/Heading";
 import GlenSmall from "../img/About.jpg";
 import GlenLarge from "../img/About-Large.jpg";
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 import { fadeIn } from "../components/Animtions";
+import { useLocation } from "react-router-dom";
 
 const About: React.FC = () => {
   const projectExperience = [
@@ -141,16 +142,77 @@ const About: React.FC = () => {
       ],
     },
   ];
+  const certifications = [
+    {
+      company: "Introduction to Front-End Development",
+      position: "",
+      duration: "Meta: Issued Aug 2022",
+      responsibilities: [
+        {
+          point: "Credential ID: 5JN96SXSJ84T",
+        },
+        {
+          point: "See credential: External link",
+        },
+      ],
+    },
+    {
+      company:
+        "Introduction to Cloud Development with HTML5, CSS3, and JavaScript",
+      position: "edX",
+      duration: "Issued Jun 2021",
+      responsibilities: [
+        {
+          point: "See credential: External link",
+        },
+      ],
+    },
+    {
+      company: "Front-End Web UI Frameworks and Tools: Bootstrap 4",
+      position: "Coursera",
+      duration: "Issued May 2021",
+      responsibilities: [
+        {
+          point: "Credential ID: XEF4WN32HR3G",
+        },
+        {
+          point: "See credential: External link",
+        },
+      ],
+    },
+    {
+      company: "Responsive Web Design",
+      position: "freeCodeCamp",
+      duration: "Issued Apr 2021",
+      responsibilities: [
+        {
+          point: "See credential: External link",
+        },
+      ],
+    },
+    {
+      company: "Learning Python",
+      position: "LinkedIn",
+      duration: "Issued Oct 2020",
+      responsibilities: [
+        {
+          point: "See credential: External link",
+        },
+      ],
+    },
+  ];
   const aboutPage = useRef<HTMLDivElement>(null);
   const Work = useRef<HTMLDivElement>(null);
   const Projects = useRef<HTMLDivElement>(null);
   const otherExp = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    console.log(location);
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: Work.current,
-          start: "top 20%",
+          start: "top top",
           end: "bottom 20%",
           // markers: true,
           onLeave: () => gsap.to(".design", { color: "red" }),
@@ -159,9 +221,9 @@ const About: React.FC = () => {
       });
       ScrollTrigger.create({
         trigger: Projects.current,
-        start: "top 20%",
+        start: "top top",
         end: "bottom 20%",
-        // markers: true,
+        markers: true,
         onLeave: () => {
           gsap.to(".sub-text", { duration: 0.3, color: "#777" });
           gsap.to(".inhouse", { color: "#146C94", opacity: 1 });
@@ -175,7 +237,7 @@ const About: React.FC = () => {
       });
       ScrollTrigger.create({
         trigger: otherExp.current,
-        start: "top 20%",
+        start: "top top",
         end: "bottom 20%",
         onLeave: () => gsap.to(".otherExp", { color: "purple" }),
         onLeaveBack: () => gsap.to(".otherExp", { color: "#777" }),
@@ -184,6 +246,9 @@ const About: React.FC = () => {
     });
     return () => ctx.revert();
   }, []);
+  useEffect(() => {
+    ScrollTrigger.update();
+  }, [location]);
   return (
     <div ref={aboutPage}>
       <div className="container">
@@ -216,7 +281,7 @@ const About: React.FC = () => {
         <div className="md:w-[60%]">
           <h2
             ref={Projects}
-            className="text-xl font-rubik tracking-wide leading-heading mt-8"
+            className="text-xl font-rubik min-h-[30px] tracking-wide leading-heading mt-8"
           >
             Project Experience
           </h2>
@@ -231,7 +296,7 @@ const About: React.FC = () => {
           ))}
           <h2
             ref={Work}
-            className="text-xl font-rubik tracking-wide leading-heading mt-8"
+            className="text-xl font-rubik min-h-[30px] tracking-wide leading-heading mt-8"
           >
             Work Experience
           </h2>
@@ -246,11 +311,23 @@ const About: React.FC = () => {
           ))}
           <h2
             ref={otherExp}
-            className="text-xl font-rubik tracking-wide leading-heading mt-8"
+            className="text-xl font-rubik min-h-[30px] tracking-wide leading-heading mt-8"
           >
             Other Experience
           </h2>
           {otherExperience.map((exp, index) => (
+            <Experience
+              company={exp.company}
+              duration={exp.duration}
+              position={exp.position}
+              responsibilities={exp.responsibilities}
+              key={index}
+            />
+          ))}
+          <h2 className="text-xl font-rubik min-h-[30px] tracking-wide leading-heading mt-8">
+            Certifications
+          </h2>
+          {certifications.map((exp, index) => (
             <Experience
               company={exp.company}
               duration={exp.duration}

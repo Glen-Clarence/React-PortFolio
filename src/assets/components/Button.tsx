@@ -18,12 +18,13 @@ const Button: React.FC<buttonProps> = ({ className, children }) => {
     if (button && span) {
       tlRef.current = gsap.timeline({ paused: true });
       tlRef.current.to(span, {
-        duration: 0.2,
+        duration: 0.4,
         yPercent: -150,
+        skewY: 15,
         ease: "power2.in",
       });
       tlRef.current.set(span, { yPercent: 150 });
-      tlRef.current.to(span, { duration: 0.2, yPercent: 0 });
+      tlRef.current.to(span, { duration: 0.2, yPercent: 0, skewY: 0 });
     }
   }, []);
 

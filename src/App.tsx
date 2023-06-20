@@ -26,12 +26,8 @@ const ScrollToTop: React.FC = () => {
 function App() {
   /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
   /* @ts-ignore */
-  // const [scrollPosition, setscrollPosition] = useState(0);
-
-  /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
-  /* @ts-ignore */
   const lenis = new Lenis({
-    lerp: 0.1,
+    lerp: 0.3,
     smoothWheel: true,
     duration: 1.2,
     easing: (t: never) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),

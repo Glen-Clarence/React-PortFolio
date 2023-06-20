@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
               href="https://www.linkedin.com/in/glen-warrangal/"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-alias px-4 py-2  hover:bg-light-bg block transition-all"
             >
               Github
             </a>
@@ -30,6 +31,7 @@ const Footer: React.FC = () => {
               href="https://github.com/Glen-Clarence"
               target="_blank"
               rel="noopener noreferrer"
+              className="cursor-alias px-4 py-2  hover:bg-light-bg block transition-all"
             >
               Linkedin
             </a>
@@ -38,6 +40,7 @@ const Footer: React.FC = () => {
         <h5 className="md:text-xl">
           <a
             target="_blank"
+            className="cursor-alias px-4 py-2  hover:bg-light-bg block transition-all"
             href="https://drive.google.com/file/d/1XD2bHtUOE2PsJo0BStuKc287Q0zNqJx8/view?usp=share_link"
           >
             Resume

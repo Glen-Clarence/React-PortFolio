@@ -32,15 +32,19 @@ const Header = () => {
             <h5 className="text-slate-600">Karnataka</h5>
           </div>
           <div className="hidden md:block font-rubik">
-            <h5 className="text-slate-600">
-              <a href="mailto:glenclarence007@gmail.com">
+            <h5 className="text-slate-600 cursor-alias">
+              <a
+                className="cursor-alias"
+                href="mailto:glenclarence007@gmail.com"
+              >
                 glenclarence007@gmail.com
               </a>
             </h5>
           </div>
           <div className="">
-            <h5 className="text-slate-600 font-rubik">
+            <h5 className="text-slate-600 font-rubik cursor-alias">
               <a
+                className="cursor-alias"
                 target="_blank"
                 href="https://www.linkedin.com/in/glen-warrangal/"
               >

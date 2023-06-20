@@ -61,7 +61,7 @@ const Projectshowcase: React.FC = () => {
                 <img src={Arrow} alt="Arrow" />
               </div>
               <button>
-                <span className="bg-button-primary text-white text-4xl px-3 py-3  font-medium font-rubik ">
+                <span className="bg-button-primary text-white hover:opacity-80 hover:rounded-xl text-4xl px-3 py-3  font-medium font-rubik ">
                   Live site
                 </span>
               </button>
@@ -121,88 +121,31 @@ const Projectshowcase: React.FC = () => {
         </div>
       )}
       {id === "2" && (
-        <div className="pt-1" style={{ background: "#fce8ff" }}>
-          <div className="container">
+        <div className="pt-1 work-bg" style={{ backgroundColor: "#fce8ff" }}>
+          <div className="container min-h-[100vh]">
             <Heading
               size="text-xl"
               bold
               className=" mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-rubik tracking-wider"
             >
-              <span>Task Trackker</span>
+              <span>Yet to be added</span>
             </Heading>
-          </div>
-          <div className="container mt-8 flex justify-between">
-            <div className="font-rubik ">
-              <h4 className="opacity-40 border-b-2 border-b-border-bg w-fit pb-4 text-xl">
-                Role/Services
-              </h4>
-              <h5 className="mt-4 text-xl">Design & Development</h5>
-            </div>
-            <div className="relative">
-              <div className="absolute top-[-50px] md:-top-[110px] -right-[15px]">
-                <img src={Arrow} alt="Arrow" />
-              </div>
-              <button>
-                <span className="bg-button-primary text-white text-4xl px-3 py-3  font-medium font-rubik ">
-                  Live site
-                </span>
-              </button>
-            </div>
-          </div>
-          <div className="container mt-12">
-            <div className="">
-              <img
-                ref={projectImage}
-                className="object-cover scale-90"
-                src={adventure}
-                alt="Project-One"
-              />
-            </div>
-          </div>
-          <div className="container mt-12 pb-12">
-            <div className="relative">
-              <div className='absolute top-[8px]  left-1/2 w-[79%] rounded-2xl overflow-hidden transform -translate-x-1/2 -translate-y-1/2"'>
-                <video
-                  className="object-cover w-full h-full"
-                  src={desktopVedio}
-                  loop
-                  muted
-                  autoPlay
-                ></video>
-              </div>
-              <img className="object-cover" src={desktop} alt="Project-One" />
-            </div>
-          </div>
-          <div className="container mt-12 pb-12 flex justify-center">
-            <div className="w-[80%] rounded-2xl overflow-hidden">
-              <video
-                className="object-cover w-full h-full"
-                src={adventureMenu}
-                loop
-                muted
-                autoPlay
-              ></video>
-            </div>
-          </div>
-          <div className="container flex justify-center mt-12 pb-12">
-            <Heading
-              size="text-xl"
-              bold
-              className=" mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-rubik tracking-wider"
-            >
-              <span>Check out the design file</span>
-            </Heading>
-            {/* <iframe
-              style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
-              width="800"
-              height="450"
-              src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FYglGxASyd8bYbgcryNuFRF%2FTravel-Website%3Ftype%3Ddesign%26node-id%3D0%253A1%26t%3DFbVtkI3TB5YXIVQL-1"
-              allowFullScreen
-            ></iframe> */}
           </div>
         </div>
       )}
-      {id === "3" && <h1>Third project</h1>}
+      {id === "3" && (
+        <div className="pt-1 work-bg" style={{ backgroundColor: "#fce8ff" }}>
+          <div className="container min-h-[100vh]">
+            <Heading
+              size="text-xl"
+              bold
+              className=" mt-14 md:w-[60%] md:leading-[1.3] md:mt-20 md:text-6xl font-rubik tracking-wider"
+            >
+              <span>Yet to be added</span>
+            </Heading>
+          </div>
+        </div>
+      )}
     </>
   );
 };
